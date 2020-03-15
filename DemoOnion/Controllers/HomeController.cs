@@ -27,9 +27,9 @@ namespace DemoOnion.Controllers
             Employee _modal = new Employee();
             return View("NewEmployee", _modal);
         }
-        public IActionResult GetEmployee(int EmpID)
+        public IActionResult GetEmployee(int id)
         {
-            var modal = _employee.GetEmployeeById(EmpID);
+            var modal = _employee.GetEmployeeById(id);
             return View("EmployeeDetails", modal);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
